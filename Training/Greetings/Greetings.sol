@@ -8,7 +8,7 @@ contract Greetings {
   }
 
   function setGreetings(string _message) public {
-    message = _message
+    message = _message;
   }
 
   function getGreetings() public view returns (string) {
