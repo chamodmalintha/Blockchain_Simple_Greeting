@@ -1,0 +1,14 @@
+------------------use these commands to deploy vehicle contract-----------------------
+
+d:
+cd 3rdYear_BLOCKER_APP/Training/VehicleContract
+
+truffle migrate --compile-all --reset --network local
+
+truffle console --network local
+
+Vehicle.deployed().then(function(instance){app = instance;})
+
+app.getGreetings()
+
+app.setGreetings("Your Contract Modified", {from: web3.eth.accounts[0]})
